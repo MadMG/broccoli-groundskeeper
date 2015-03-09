@@ -1,0 +1,7 @@
+node_modules/
+tests/
+.idea
+
+.travis.yml
+.npmignore
+**/.gitkeep

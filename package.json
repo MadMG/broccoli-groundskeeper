@@ -1,0 +1,37 @@
+{
+  "name": "broccoli-groundskeeper",
+  "version": "0.1.0",
+  "description": "Broccoli plugin for groundskeeper",
+  "main": "index.js",
+  "scripts": {
+    "test": "cd test && broccoli build temp && mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MadMG/broccoli-groundskeeper.git"
+  },
+  "keywords": [
+    "broccoli-plugin",
+    "javascript",
+    "groundskeeper"
+  ],
+  "author": {
+    "name": "Martin Groller",
+    "email": "madmg82@gmail.com"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/MadMG/broccoli-groundskeeper/issues"
+  },
+  "homepage": "https://github.com/MadMG/broccoli-groundskeeper",
+  "dependencies": {
+    "broccoli-filter": "^0.1.11",
+    "groundskeeper": "^0.1.11"
+  },
+  "devDependencies": {
+    "broccoli": "^0.15.0",
+    "broccoli-cli": "0.0.1",
+    "mocha": "^2.2.1",
+    "rimraf": "^2.3.1"
+  }
+}

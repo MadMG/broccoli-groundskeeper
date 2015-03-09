@@ -8,10 +8,24 @@ $ npm install --save broccoli-groundskeeper
 ```
 
 ## Usage
+Example options:
 
-### groundskeeper(usage)
+```
+{
+  "processFiles": ['app.js'],
+  "console": true,
+  "debugger": false,
+  "namespace": [
+    "logger.debug",
+    "logger.info"]
+)
+```
 
-See the Groundskeeper [usage](https://github.com/Couto/groundskeeper#usage).
+__processFiles__
+
+Is an array with file names which will be processed. The source path must end with any of the array entries. If the array is empty all files of the source tree will be processed.
+
+See the Groundskeeper [usage](https://github.com/Couto/groundskeeper#usage) for further options.
 
 
 ## License

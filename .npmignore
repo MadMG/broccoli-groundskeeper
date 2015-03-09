@@ -1,5 +1,5 @@
 node_modules/
-tests/
+test/
 .idea
 
 .travis.yml

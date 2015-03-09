@@ -2,6 +2,10 @@
 var Filter = require('broccoli-filter');
 var groundskeeper = require('groundskeeper');
 
+var _escapeRegExp = function (string) {
+  return string.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+};
+
 function GroundskeeperFilter (inputTree, options) {
   if (!(this instanceof GroundskeeperFilter)) {
     return new GroundskeeperFilter(inputTree, options);
@@ -21,9 +25,10 @@ GroundskeeperFilter.prototype.canProcessFile = function (relativePath) {
   if (this.getDestFilePath(relativePath) != null) {
     var processFiles = this.options.processFiles || [];
 
-    return processFiles.length === 0 || processFiles.some(function (fileToProcess) {
-      return relativePath.indexOf(fileToProcess) !== -1;
-    });
+    return processFiles.length === 0 ||
+        processFiles.some(function (fileToProcess) {
+          return new RegExp(_escapeRegExp(fileToProcess) + '$').test(relativePath);
+        });
   }
   return false;
 };
